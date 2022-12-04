@@ -1,0 +1,118 @@
+@import './scss/variables';
+
+.App {
+  margin: 0 auto;
+  max-width: 820px;
+  padding: 10px;
+
+  h2 {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    input {
+      padding: 15px 20px;
+      font-size: 20px;
+      border: 1px solid $gray;
+      border-radius: 9px 0 0 9px;
+      transition: 0.3s;
+
+      &:focus {
+        outline: 0;
+        -webkit-box-shadow: 0px 0px 35px 0px rgba(34, 60, 80, 0.13);
+        -moz-box-shadow: 0px 0px 35px 0px rgba(34, 60, 80, 0.13);
+        box-shadow: 0px 0px 35px 0px rgba(34, 60, 80, 0.13);
+      }
+    }
+
+    .btnAddItem {
+      border: none;
+      background-color: $blue;
+      width: 100px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 0.8px;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 0 9px 9px 0;
+
+      &:hover {
+        outline: 0;
+        -webkit-box-shadow: 0px 0px 15px 0px $blue;
+        -moz-box-shadow: 0px 0px 15px 0px $blue;
+        box-shadow: 0px 0px 15px 0px $blue;
+      }
+    }
+  }
+
+  .wrapperTags {
+    margin-top: 20px;
+
+    .ListTags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+
+      li {
+        padding: 10px 20px;
+        background-color: $gray;
+        display: flex;
+        row-gap: 10px;
+        display: inline-block;
+        display: flex;
+        border-radius: 15px;
+        color: white;
+        font-weight: bold;
+
+        span {
+          cursor: pointer;
+        }
+
+        .btnRemoveTag {
+          margin-left: 15px;
+          color: $red;
+        }
+      }
+    }
+  }
+
+  .listBookmark {
+    li {
+      display: grid;
+      grid-template-columns: 10fr 1fr 1fr;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $gray;
+      margin-top: 20px;
+      padding: 10px 20px;
+
+      span:nth-child(1) {
+        font-size: 25px;
+        letter-spacing: 0.9px;
+        font-style: italic;
+        color: rgb(71, 92, 92);
+
+        b {
+          color: rgb(187, 36, 36);
+        }
+      }
+
+      span:nth-child(2),
+      span:nth-child(3) {
+        cursor: pointer;
+        width: fit-content;
+      }
+
+      span {
+        display: block;
+      }
+    }
+  }
+}
